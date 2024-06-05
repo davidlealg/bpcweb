@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computation Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Computation Form</h1>
+        <form id="computationForm">
+            <label for="exchangeRate">Enter the exchange rate amount in USD:</label>
+            <input type="text" id="exchangeRate" required><br>
+            
+            <label for="monthlySalary">Enter the employee's monthly salary:</label>
+            <input type="text" id="monthlySalary" required><br>
+            
+            <label for="employeeFName">Enter the employee's first name:</label>
+            <input type="text" id="employeeFName" required><br>
+            
+            <label for="employeeLName">Enter the employee's last name:</label>
+            <input type="text" id="employeeLName" required><br>
+            
+            <label for="proposedHourlySalary">Enter the proposed hourly salary:</label>
+            <input type="text" id="proposedHourlySalary" required><br>
+            
+            <label for="proposedMonthlyHours">Enter the number of monthly hours planned in the proposed project:</label>
+            <input type="text" id="proposedMonthlyHours" required><br>
+            
+            <label for="nominalSalary">Enter the monthly nominal salary:</label>
+            <input type="text" id="nominalSalary" required><br>
+            
+            <label for="nominalIncome">Enter the net nominal income:</label>
+            <input type="text" id="nominalIncome" required><br>
+            
+            <label for="SGMM">Enter the SGMM amount:</label>
+            <input type="text" id="SGMM" required><br>
+            
+            <label for="fixedOption">Enter Fixed Option (yes or no):</label>
+            <input type="text" id="fixedOption" required><br>
+            
+            <label for="paymentTerms">Enter the payment terms of the client:</label>
+            <input type="text" id="paymentTerms" required><br>
+            
+            <label for="numOfDays">Enter the number of days (30, 60, 90, 120):</label>
+            <input type="text" id="numOfDays" required><br>
+            
+            <label for="fixedOption2">Enter Fixed Option (yes or no):</label>
+            <input type="text" id="fixedOption2" required><br>
+            
+            <label for="headHunter">Head Hunter LATAM - Berenice Garcia:</label>
+            <input type="text" id="headHunter" required><br>
+            
+            <label for="PMC">Personnel Management Cost:</label>
+            <input type="text" id="PMC" required><br>
+            
+            <label for="tariffcph">What is the tariff cost per hour:</label>
+            <input type="text" id="tariffcph" required><br>
+            
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        
+        <div id="output">
+            <!-- Output will be shown here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
