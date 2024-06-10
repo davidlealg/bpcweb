@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computation Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Computation Form</h1>
+        <form id="computationForm">
+            <label for="exchangeRate">Enter the exchange rate amount in USD:</label>
+            <input type="number" id="exchangeRate" aria-label="Exchange rate amount in USD" required>
+
+            <label for="monthlySalary">Enter the employee's monthly salary:</label>
+            <input type="number" id="monthlySalary" aria-label="Employee's monthly salary" required>
+
+            <label for="employeeFName">Enter the employee's first name:</label>
+            <input type="text" id="employeeFName" aria-label="Employee's first name" required>
+
+            <label for="employeeLName">Enter the employee's last name:</label>
+            <input type="text" id="employeeLName" aria-label="Employee's last name" required>
+
+            <label for="proposedHourlySalary">Enter the proposed hourly salary:</label>
+            <input type="number" id="proposedHourlySalary" aria-label="Proposed hourly salary" required>
+
+            <label for="proposedMonthlyHours">Enter the number of monthly hours planned in the proposed project:</label>
+            <input type="number" id="proposedMonthlyHours" aria-label="Number of monthly hours planned in the proposed project" required>
+
+            <label for="nominalSalary">Enter the monthly nominal salary:</label>
+            <input type="number" id="nominalSalary" aria-label="Monthly nominal salary" required>
+
+            <label for="nominalIncome">Enter the net nominal income:</label>
+            <input type="number" id="nominalIncome" aria-label="Net nominal income" required>
+
+            <label for="SGMM">Enter the SGMM amount:</label>
+            <input type="number" id="SGMM" aria-label="SGMM amount" required>
+
+            <label for="fixedOption">Enter Fixed Option (yes or no):</label>
+            <input type="text" id="fixedOption" aria-label="Fixed Option" required>
+
+            <label for="paymentTerms">Enter the payment terms of the client:</label>
+            <input type="text" id="paymentTerms" aria-label="Payment terms of the client" required>
+
+            <label for="numOfDays">Enter the number of days (30, 60, 90, 120):</label>
+            <input type="number" id="numOfDays" aria-label="Number of days" required>
+
+            <label for="fixedOption2">Enter Fixed Option (yes or no):</label>
+            <input type="text" id="fixedOption2" aria-label="Fixed Option" required>
+
+            <label for="headHunter">Head Hunter LATAM - Berenice Garcia:</label>
+            <input type="text" id="headHunter" aria-label="Head Hunter LATAM - Berenice Garcia" required>
+
+            <label for="PMC">Personnel Management Cost:</label>
+            <input type="number" id="PMC" aria-label="Personnel Management Cost" required>
+
+            <label for="tariffcph">What is the tariff cost per hour:</label>
+            <input type="number" id="tariffcph" aria-label="Tariff cost per hour" required>
+
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+
+        <div id="output" aria-live="polite">
+            <!-- Output will be shown here -->
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            // Your calculation logic here
+            const exchangeRate = document.getElementById('exchangeRate').value;
+            const monthlySalary = document.getElementById('monthlySalary').value;
+            const employeeFName = document.getElementById('employeeFName').value;
+            const employeeLName = document.getElementById('employeeLName').value;
+            const proposedHourlySalary = document.getElementById('proposedHourlySalary').value;
+            const proposedMonthlyHours = document.getElementById('proposedMonthlyHours').value;
+            const nominalSalary = document.getElementById('nominalSalary').value;
+            const nominalIncome = document.getElementById('nominalIncome').value;
+            const SGMM = document.getElementById('SGMM').value;
+            const fixedOption = document.getElementById('fixedOption').value;
+            const paymentTerms = document.getElementById('paymentTerms').value;
+            const numOfDays = document.getElementById('numOfDays').value;
+            const fixedOption2 = document.getElementById('fixedOption2').value;
+            const headHunter = document.getElementById('headHunter').value;
+            const PMC = document.getElementById('PMC').value;
+            const tariffcph = document.getElementById('tariffcph').value;
+            
+            // Add your calculation and display logic here
+            let output = `
+                Exchange Rate: ${exchangeRate}<br>
+                Monthly Salary: ${monthlySalary}<br>
+                Employee Name: ${employeeFName} ${employeeLName}<br>
+                Proposed Hourly Salary: ${proposedHourlySalary}<br>
+                Proposed Monthly Hours: ${proposedMonthlyHours}<br>
+                Nominal Salary: ${nominalSalary}<br>
+                Nominal Income: ${nominalIncome}<br>
+                SGMM: ${SGMM}<br>
+                Fixed Option: ${fixedOption}<br>
+                Payment Terms: ${paymentTerms}<br>
+                Number of Days: ${numOfDays}<br>
+                Fixed Option 2: ${fixedOption2}<br>
+                Head Hunter: ${headHunter}<br>
+                Personnel Management Cost: ${PMC}<br>
+                Tariff Cost Per Hour: ${tariffcph}
+            `;
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+</html>
